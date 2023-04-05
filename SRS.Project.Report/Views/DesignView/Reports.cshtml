@@ -1,0 +1,42 @@
+﻿@using Stimulsoft.Report.Mvc;
+@using Stimulsoft.Report.Web;
+@using Stimulsoft.System.Web.UI.WebControls;
+
+@{
+    ViewBag.Title = "RSR | Design View";
+}
+
+@Html.StiNetCoreDesigner("StiMvcDesigner1", new StiNetCoreDesignerOptions()
+{
+    Actions =
+    {
+        GetReport = "GetReport",
+        PreviewReport = "PreviewReport",
+        SaveReport = "SaveReport",
+        DesignerEvent = "DesignerEvent",
+    },
+    FileMenu =
+    {
+        ShowExit = false,
+        ShowSave = false,
+        ShowSaveAs = false,
+        ShowOpen = false,
+        ShowOptions =false,
+        ShowClose = false,
+        ShowHelp =false,
+        ShowAbout = false,
+        ShowFileMenuNewDashboard =false,
+        ShowFileMenuNewReport = false,
+        ShowInfo = false,
+        ShowNew = false,
+        ShowReportSetup = false
+    },
+    Toolbar = {
+        ShowAboutButton = false,
+        ShowLayoutButton = false,
+        ShowInsertButton = true,
+        ShowPageButton = false,
+        ShowSetupToolboxButton = false,
+        ShowSaveButton = false
+    }
+})

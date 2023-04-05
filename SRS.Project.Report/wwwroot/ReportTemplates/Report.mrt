@@ -1,0 +1,356 @@
+{
+  "ReportVersion": "2022.1.1.0",
+  "ReportGuid": "bb28fffc33b44479b8b651f931e57b3e",
+  "ReportName": "Report",
+  "ReportAlias": "Report",
+  "ReportCreated": "/Date(1672703813000+0330)/",
+  "ReportChanged": "/Date(1673458503171+0330)/",
+  "EngineVersion": "EngineV2",
+  "CalculationMode": "Interpretation",
+  "PreviewSettings": 268435455,
+  "Script": "using System;\r\nusing System.Drawing;\r\nusing System.Windows.Forms;\r\nusing System.Data;\r\nusing Stimulsoft.Controls;\r\nusing Stimulsoft.Base.Drawing;\r\nusing Stimulsoft.Report;\r\nusing Stimulsoft.Report.Dialogs;\r\nusing Stimulsoft.Report.Components;\r\n\r\nnamespace Reports\r\n{\r\n    public class Report : Stimulsoft.Report.StiReport\r\n    {\r\n        public Report()        {\r\n            this.InitializeComponent();\r\n        }\r\n\r\n        #region StiReport Designer generated code - do not modify\r\n\t\t#endregion StiReport Designer generated code - do not modify\r\n    }\r\n}\r\n",
+  "ReferencedAssemblies": {
+    "0": "System.Dll",
+    "1": "System.Drawing.Dll",
+    "2": "System.Windows.Forms.Dll",
+    "3": "System.Data.Dll",
+    "4": "System.Xml.Dll",
+    "5": "Stimulsoft.Controls.Dll",
+    "6": "Stimulsoft.Base.Dll",
+    "7": "Stimulsoft.Report.Dll"
+  },
+  "Dictionary": {
+    "DataSources": {
+      "0": {
+        "Ident": "StiDataTableSource",
+        "Name": "invoice",
+        "Alias": "invoice",
+        "Key": "e70a81129c6444bcbe1dc12f8a38f670",
+        "Columns": {
+          "0": {
+            "Name": "tracking_code",
+            "Index": -1,
+            "NameInSource": "tracking_code",
+            "Alias": "tracking_code",
+            "Type": "System.String",
+            "Key": "890e42188dd34695a8f5918b2298f42a"
+          },
+          "1": {
+            "Name": "device_name",
+            "Index": -1,
+            "NameInSource": "device_name",
+            "Alias": "device_name",
+            "Type": "System.String",
+            "Key": "71f966ad1cd54810abd8b92a2c28a1ee"
+          },
+          "2": {
+            "Name": "device_model",
+            "Index": -1,
+            "NameInSource": "device_model",
+            "Alias": "device_model",
+            "Type": "System.String",
+            "Key": "a4d51cb8cd0c493fb36bbedc9a4ae8a2"
+          },
+          "3": {
+            "Name": "problem",
+            "Index": -1,
+            "NameInSource": "problem",
+            "Alias": "problem",
+            "Type": "System.String"
+          },
+          "4": {
+            "Name": "problem_client_say",
+            "Index": -1,
+            "NameInSource": "problem_client_say",
+            "Alias": "problem_client_say",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "invoice"
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "3212cab5457e51a3dc2abba175c6b73a",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:",
+      "Components": {
+        "0": {
+          "Ident": "StiTable",
+          "Name": "Tableinvoice",
+          "ClientRectangle": "0,0.4,19,2.28",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiTableCell",
+              "Name": "Tableinvoice_Cell1",
+              "ClientRectangle": "0,0,4.06,0.76",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Problem"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:231,230,230",
+              "TextBrush": "solid:0,0,0",
+              "ID": 0
+            },
+            "1": {
+              "Ident": "StiTableCell",
+              "Name": "Tableinvoice_Cell2",
+              "ClientRectangle": "4.06,0,4.07,0.76",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "problem_client_say"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:231,230,230",
+              "TextBrush": "solid:Black",
+              "ID": 1
+            },
+            "2": {
+              "Ident": "StiTableCell",
+              "Name": "Tableinvoice_Cell3",
+              "ClientRectangle": "8.13,0,3.81,0.76",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "tracking_code"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:231,230,230",
+              "TextBrush": "solid:Black",
+              "ID": 2
+            },
+            "3": {
+              "Ident": "StiTableCell",
+              "Name": "Tableinvoice_Cell4",
+              "ClientRectangle": "11.94,0,3.81,0.76",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "device_name"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:231,230,230",
+              "TextBrush": "solid:Black",
+              "ID": 3
+            },
+            "4": {
+              "Ident": "StiTableCell",
+              "Name": "Tableinvoice_Cell5",
+              "ClientRectangle": "15.75,0,3.25,0.76",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "device_model"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:231,230,230",
+              "TextBrush": "solid:Black",
+              "ID": 4
+            },
+            "5": {
+              "Ident": "StiTableCell",
+              "Name": "Tableinvoice_Cell6",
+              "ClientRectangle": "0,0.76,4.06,0.76",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{invoice.Problem}"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 5
+            },
+            "6": {
+              "Ident": "StiTableCell",
+              "Name": "Tableinvoice_Cell7",
+              "ClientRectangle": "4.06,0.76,4.07,0.76",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{invoice.problem_client_say}"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 6
+            },
+            "7": {
+              "Ident": "StiTableCell",
+              "Name": "Tableinvoice_Cell8",
+              "ClientRectangle": "8.13,0.76,3.81,0.76",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{invoice.tracking_code}"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 7
+            },
+            "8": {
+              "Ident": "StiTableCell",
+              "Name": "Tableinvoice_Cell9",
+              "ClientRectangle": "11.94,0.76,3.81,0.76",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{invoice.device_name}"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 8
+            },
+            "9": {
+              "Ident": "StiTableCell",
+              "Name": "Tableinvoice_Cell10",
+              "ClientRectangle": "15.75,0.76,3.25,0.76",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{invoice.device_model}"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 9
+            },
+            "10": {
+              "Ident": "StiTableCell",
+              "Name": "Tableinvoice_Cell11",
+              "ClientRectangle": "0,1.52,4.06,0.77",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Font": ";9;Bold;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 10
+            },
+            "11": {
+              "Ident": "StiTableCell",
+              "Name": "Tableinvoice_Cell12",
+              "ClientRectangle": "4.06,1.52,4.07,0.77",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 11
+            },
+            "12": {
+              "Ident": "StiTableCell",
+              "Name": "Tableinvoice_Cell13",
+              "ClientRectangle": "8.13,1.52,3.81,0.77",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 12
+            },
+            "13": {
+              "Ident": "StiTableCell",
+              "Name": "Tableinvoice_Cell14",
+              "ClientRectangle": "11.94,1.52,3.81,0.77",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 13
+            },
+            "14": {
+              "Ident": "StiTableCell",
+              "Name": "Tableinvoice_Cell15",
+              "ClientRectangle": "15.75,1.52,3.25,0.77",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 14
+            }
+          },
+          "MinHeight": 0.30000000000000004,
+          "DataSourceName": "invoice",
+          "RowCount": 3,
+          "FooterRowsCount": 1,
+          "HeaderRowsCount": 1,
+          "NumberID": 15
+        }
+      },
+      "PageWidth": 21.0,
+      "PageHeight": 29.7,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0"
+      },
+      "Margins": {
+        "Left": 1.0,
+        "Right": 1.0,
+        "Top": 1.0,
+        "Bottom": 1.0
+      }
+    }
+  }
+}

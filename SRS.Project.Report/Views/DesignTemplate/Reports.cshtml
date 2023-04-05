@@ -1,0 +1,45 @@
+﻿@using Stimulsoft.Report.Mvc;
+
+@{
+    ViewBag.Title = "RSR | Designe Template";
+}
+
+@Html.StiNetCoreDesigner("StiMvcDesigner1", new StiNetCoreDesignerOptions()
+{    
+    Actions =
+    {
+        GetReport = "GetReport",
+        PreviewReport = "PreviewReport",
+        SaveReport = "SaveReport",
+        DesignerEvent = "DesignerEvent",
+        OpenReport = "OpenReport",
+    },
+    FileMenu =
+    {
+        ShowExit = false,
+        ShowSave = true,
+        ShowSaveAs = false,
+        ShowOpen = true,
+        ShowOptions =false,
+        ShowClose = false,
+        ShowHelp =false,
+        ShowAbout = false,
+        ShowFileMenuNewDashboard =false,
+        ShowFileMenuNewReport = false,
+        ShowInfo = false,
+        ShowNew = false,
+        ShowReportSetup = false
+    },
+    Toolbar =
+    {
+        ShowSaveButton = true,
+        ShowPreviewButton = true,
+        ShowAboutButton = false,
+        ShowInsertButton = true,
+        ShowLayoutButton = true,
+        ShowPageButton =true,
+        ShowSetupToolboxButton = false,
+        ShowToolbar = true
+    },
+    
+})

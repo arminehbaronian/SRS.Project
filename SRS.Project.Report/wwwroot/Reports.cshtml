@@ -1,0 +1,90 @@
+﻿@using Stimulsoft.Report.Mvc;
+
+@{
+    ViewBag.Title = "RSR | Designer";
+}
+
+<dive style="height: 40px;
+    position: fixed;
+    background: red;
+    z-index: 100000;">
+   @*<input type="file" asp-form="upload" placeholder="click" />*@
+    @*<form class="form-horizontal" asp-controller="Design" asp-action="Upload" method="POST" enctype="multipart/form-data">
+
+        <input type="file" asp-for="File">
+        <input type="text" asp-for="Name">
+        <input type="text" asp-for="Description">
+    </form>*@
+    @*<form method="post" enctype="multipart/form-data">
+        <input type="file" asp-for="Upload" />
+        <input type="submit" />
+    </form>*@
+</dive>
+
+@Html.StiNetCoreDesigner("StiMvcDesigner1", new StiNetCoreDesignerOptions()
+{    
+    Actions =
+    {
+        GetReport = "GetReport",
+        PreviewReport = "PreviewReport",
+        SaveReport = "SaveReport",
+        DesignerEvent = "DesignerEvent",
+        Exit = "ExitDesigner",
+        OpenReport = "OpenReport",
+        SaveReportAs = "SaveReportAs"
+    },
+    FileMenu =
+    {
+        ShowExit = false,
+        ShowSave = true,
+        ShowSaveAs = false,
+        ShowOpen = true,
+        ShowOptions =false,
+        ShowClose = false,
+        ShowHelp =false,
+        ShowAbout = false,
+        ShowFileMenuNewDashboard =false,
+        ShowFileMenuNewReport = false,
+        ShowInfo = false,
+        ShowNew = false,
+        ShowReportSetup = false
+    },
+    Toolbar =
+    {
+        ShowSaveButton = true,
+        ShowPreviewButton = true,
+        ShowAboutButton = false,
+        ShowInsertButton = true,
+        ShowLayoutButton = true,
+        ShowPageButton =true,
+        ShowSetupToolboxButton = false,
+        ShowToolbar = true
+    },
+    
+})
+
+<script>
+    //$(document).ready(function({
+    //    setTimeout(() => {
+    //     //   $("#StiMvcDesigner1FileMenuItemopenReport").click(function (event) {
+    //     //   debugger;
+    //     //event.preventDefault();
+    //     //$(this).val("");
+    //     console.log(1);
+    //  //});
+    //    }, 5000);
+        
+    //}));
+    $(document).ready(function() {
+    console.log( "ready!" );
+        //setTimeout(() => {
+        $("#StiMvcDesigner1FileMenuItemopenReport").click(function (event) {
+                 //   debugger;
+                 //event.preventDefault();
+                 //$(this).val("");
+                 //console.log(1);
+            alert("Handler for .click() called.");
+              });
+                //}, 5000);
+    });
+</script>

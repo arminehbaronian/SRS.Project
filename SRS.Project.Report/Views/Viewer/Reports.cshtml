@@ -1,0 +1,33 @@
+﻿@using Stimulsoft.Report.Mvc;
+@using Stimulsoft.Report.Web;
+@using Stimulsoft.System.Web.UI.WebControls;
+@using System.Windows.Forms;
+
+@{
+    ViewBag.Title = "RSR | Viewer";
+}
+
+@Html.StiNetCoreViewer("StiMvcViewer2", new StiNetCoreViewerOptions()
+{
+    Actions =
+    {
+        GetReport = "GetReport",
+        ViewerEvent = "ViewerEvent",
+        DesignReport = "Design"
+    },
+    Appearance =
+    {
+        BackgroundColor = System.Drawing.Color.FromArgb(0xe8, 0xe8, 0xe8),
+        ScrollbarsMode = true
+    },
+    Toolbar =
+    {
+        DisplayMode = StiToolbarDisplayMode.Separated,
+        ShowDesignButton = false,
+        ShowOpenButton = false,
+        ShowEditorButton = false,
+
+    },
+    Width = Unit.Percentage(100),
+    Height = Unit.Percentage(100)
+})
